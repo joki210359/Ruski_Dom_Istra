@@ -66,17 +66,26 @@
                 <!-- Additional required wrapper -->
                 <div x-cloak class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide"> <x-video /> </div>
+                    @foreach ($post->media as $file)
+                    <li class="swiper-slide">
+                        @switch($file->mime)
+                            @case('video')
+                        
+                                <x-video  source="{{$file->url}}" />
+                                @break
+                            @case('image')
+                            <img src="{{$file->url}}" alt="" class="h-[500px] w-full block object-scale-down "> 
+                                @break
+                            @default
+                            
+                        @endswitch
 
-                    <div class="swiper-slide"> <img src="https://images.pexels.com/photos/28483666/pexels-photo-28483666/free-photo-of-snail-on-dry-branch-in-natural-setting.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=loadauto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="h-[500px] w-full block object-scale-down"> </div>
-                    <div class="swiper-slide"> <img src="https://images.pexels.com/photos/17342296/pexels-photo-17342296/free-photo-of-balloons-flying-over-the-canyons.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="h-[500px] w-full block object-scale-down"> </div>
-                    <div class="swiper-slide"> <img src="https://images.pexels.com/photos/28571321/pexels-photo-28571321/free-photo-of-autumn-church-facade-in-jonkoping-sweden.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="h-[500px] w-full block object-scale-down"> </div>
-
-
-                </div>
+                   </li>
+                        
+                    @endforeach
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
-
+                @if (count($post->media)> 1)
                 {{-- prev --}}
                 <div class="swiper-button-prev absolute top-1/2 z-10 p-2">
                     <div class=" bg-white/95 border p-1 rounded-full text-gray-900">
@@ -102,7 +111,7 @@
 
                     </div>
                 </div>
-
+                @endif
                 <!-- If we need scrollbar -->
                 <div class="swiper-scrollbar"></div>
             </div>
@@ -163,11 +172,9 @@
         <p class="font-bold text-sm">104,474 likes</p>
 
         {{-- name and comment --}}
-        <div class="flex text-sm gap-2 font-medium">
-            <p> <strong class="font-bold">{{fake()->name}} </strong>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus facilis cumque aperiam officia
-                commodi explicabo voluptatibus aliquid omnis culpa magnam enim ullam praesentium, ab maiores expedita,
-                architecto consectetur placeat. Magnam?
+        <div class=" flex text-sm gap-2 font-medium ">
+            <p> <strong class="font-bold">{{$post->user->name}}</strong> 
+            {{$post->description}}
             </p>
         </div>
 

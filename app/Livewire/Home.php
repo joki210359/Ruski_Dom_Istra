@@ -3,9 +3,20 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use App\Models\Post;
 
 class Home extends Component
 {
+    public $posts;
+
+    function mount()
+    {
+
+        $this->posts = Post::latest()->get();
+
+        // dd( $this->posts);
+
+    }
 
     public function render()
     {

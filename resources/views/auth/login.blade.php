@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@php
+    use Illuminate\Support\Facades\Route;
+@endphp
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -124,6 +127,7 @@
 
         [type=button], [type=reset], [type=submit], button {
             -webkit-appearance: button;
+            appearance: button;
             background-color: transparent;
             background-image: none
         }
@@ -146,6 +150,7 @@
 
         [type=search] {
             -webkit-appearance: textfield;
+            appearance: textfield;
             outline-offset: -2px
         }
 
@@ -204,7 +209,6 @@
 
         audio, canvas, embed, iframe, img, object, svg, video {
             display: block;
-            vertical-align: middle
         }
 
         img, video {
