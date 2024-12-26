@@ -7,7 +7,8 @@
     <header class="flex items-center gap-3">
 
 
-        <x-avatar src="{{ asset('profiles/0.jpg') }}" class="w-[80px] h-[120px] rounded-full object-cover" alt="Profile Picture" />
+        <x-avatar src="{{ asset('profiles/0.jpg') }}"  class="h-24 w-24 rounded-full bg-gradient-to-r from-red-500 via-yellow-500 to-purple-500 p-[5px] " style="margin-left: 10px;" 
+        alt="Profile Picture" />
 
         <div class="grid grid-cols-7 w-full gap-2">
 
