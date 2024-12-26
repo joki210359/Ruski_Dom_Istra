@@ -67,22 +67,25 @@
                 <div x-cloak class="swiper-wrapper">
                     <!-- Slides -->
                     @foreach ($post->media as $file)
-                    <li class="swiper-slide">
-                        @switch($file->mime)
-                            @case('video')
-                        
-                                <x-video  source="{{$file->url}}" />
-                                @break
-                            @case('image')
-                            <img src="{{$file->url}}" alt="" class="h-[500px] w-full block object-scale-down "> 
-                                @break
-                            @default
-                            
-                        @endswitch
+    <li class="swiper-slide">
+        @switch($file->mime)
+            @case('video')
+                <video controls>
+                    <source src="{{ $file->url }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                @break
+            @case('image')
 
-                   </li>
-                        
-                    @endforeach
+                <img src="{{ $file->url }}" alt="Image" style="max-height: 500px; width: auto; display: block;">
+                @break
+            @default
+                <p>Unsupported media type: {{ $file->mime }}</p>
+        @endswitch
+    </li>
+@endforeach
+
+
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
                 @if (count($post->media)> 1)
