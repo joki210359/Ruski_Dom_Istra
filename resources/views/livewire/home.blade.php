@@ -33,7 +33,7 @@
         <ul class="flex overflow-x-auto scrollbar-hide items-center gap-2">
           @for ($i = 0; $i < 10; $i++)
         <li class="flex flex-col justify-center w-20 gap-1 p-2">
-        <x-avatar story src="{{ asset('profiles/' . $i . '.jpg') }}" class="h-14 w-14" />
+        <x-avatar story src="{{ asset('profiles/' . $i . '.jpg') }}" class="h-14 w-10" />
         <p class="text-xs font-medium truncate">{{ fake()->name }}</p>
         </li>
       @endfor
@@ -61,7 +61,7 @@
     {{-- Right content (suggestions) --}}
     <aside class="lg:col-span-4 hidden lg:block p-4">
       <div class="flex items-center gap-2">
-        <x-avatar story src="{{ asset('profiles/' . $i . '.jpg') }}" class="h-14 w-14" />
+        <x-avatar story src="{{ asset('profiles/' . $i . '.jpg') }}" class="h-14 w-10" />
         <h4 class="font-medium">{{ fake()->name }}</h4>
       </div>
 
@@ -71,7 +71,7 @@
         <ul class="my-2 space-y-3">
           @for ($i = 0; $i < 5; $i++)
         <li class="flex items-center gap-3">
-        <x-avatar story src="{{ asset('profiles/' . $i . '.jpg') }}" class="h-14 w-14" />
+        <x-avatar story src="{{ asset('profiles/' . $i . '.jpg') }}" class="h-20 w-14 six-sided" />
         <div class="grid grid-cols-7 w-full gap-2">
           <div class="col-span-5">
           <h5 class="font-semibold truncate text-sm">{{ fake()->name }}</h5>

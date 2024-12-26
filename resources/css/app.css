@@ -6,3 +6,12 @@
 .max-w-lg {
     max-width: 40rem;
 }
+.six-sided {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.clip-triangle {
+    width: 3.5rem; /* 14px */
+    height: 3.5rem; /* 14px */
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
