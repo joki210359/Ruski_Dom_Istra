@@ -50,9 +50,9 @@
 
     </div>
 </div>
-<div>
+<!-- <div> -->
     @yield('content')
 </div>
-
+@livewire('wire-elements-modal')
 </body>
 </html>
