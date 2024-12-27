@@ -61,7 +61,7 @@
     {{-- Right content (suggestions) --}}
     <aside class="lg:col-span-4 hidden lg:block p-4">
       <div class="flex items-center gap-2">
-        <x-avatar story src="{{ asset('profiles/' . $i . '.jpg') }}" class="h-14 w-14   rounded-full bg-gradient-to-r from-red-500 via-yellow-500 to-purple-500 via-blue-500 to-green-500 p-[5px]" />
+        <x-avatar story src="{{ asset('profiles/' . $i . '') }}" class="h-14 w-24   rounded-full bg-gradient-to-r from-red-500 via-yellow-500 to-purple-500 via-blue-500 to-green-500 p-[5px]" />
         <h4 class="font-medium">{{ fake()->name }}</h4>
       </div>
 
