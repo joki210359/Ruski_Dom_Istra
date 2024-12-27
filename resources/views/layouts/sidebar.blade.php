@@ -239,5 +239,6 @@
 
         </div>
     </template>
-
+    <!-- <img id="background" class="absolute -top-0 left-0 max-w-[520px] pointer-events-none"
+    src="{{asset('assets/svgimage.svg')}}" /> -->
 </div>
