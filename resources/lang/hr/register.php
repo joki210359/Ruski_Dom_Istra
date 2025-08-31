@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'place_photo' => 'Postavite fotografiju',
+    'confirm_password' => 'Putvrdi Lozinku',
+    'name' => 'Ime',
+    'surname' => 'Prezime',
+    'username' => 'Korisničko ime',
+    'role' => 'Uloga',
+    'email' => 'Email',
+    'location' => 'Lokacija',
+    'phone' => 'Telefon',
+    'password' => 'Lozinka',
+    'bio' => 'Biografija',
+    'website' => 'Web stranica (neobavezno)',
+    'Sign up to see photos and videos from your friends.' => 'Prijavite se kako biste vidjeli fotografije i videozapise svojih prijatelja.',
+    'Gender:' => 'Spol:',
+    'Male' => 'Muško',
+    'Female' => 'Žensko',
+    'Other' => 'Ostalo',
+    'Visit Website' => 'Posjetite web stranicu',
+    'Remember me' => 'Zapamti me',
+    'Register' => 'Registracija',
+    'Already registered?' => 'Već ste registrirani?',
+];

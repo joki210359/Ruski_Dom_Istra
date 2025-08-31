@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'place_photo' => 'Place photo',
+    'confirm_password' => 'Подтвердите пароль',
+    'name' => 'Name',
+    'surname' => 'Surname',
+    'username' => 'Username',
+    'role' => 'Role',
+    'email' => 'Email',
+    'location' => 'Location',
+    'phone' => 'Phone',
+    'password' => 'Password',
+    'bio' => 'Bio',
+    'website' => 'Website (optional)',
+    'Sign up to see photos and videos from your friends.' => 'Sign up to see photos and videos from your friends.',
+    'Gender:' => 'Gender:',
+    'Male' => 'Male',
+    'Female' => 'Female',
+    'Other' => 'Other',
+    'Visit Website' => 'Visit Website',
+    'Remember me' => 'Remember me',
+    'Register' => 'Register',
+    'Already registered?' => 'Already registered?',
+];
